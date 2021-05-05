@@ -70,7 +70,7 @@
                         <select class="custom-select my-1 mr-sm-2" wire:model="Nationality_Mother_id">
                             <option selected>{{trans('Parent_trans.Choose')}}...</option>
                             @foreach($Nationalities as $National)
-                                <option value="{{$National->id}}">{{$National->Name}}</option>
+                                <option value="{{$National->id}}">{{$National->name}}</option>
                             @endforeach
                         </select>
                         @error('Nationality_Mother_id')
@@ -82,7 +82,7 @@
                         <select class="custom-select my-1 mr-sm-2" wire:model="Blood_Type_Mother_id">
                             <option selected>{{trans('Parent_trans.Choose')}}...</option>
                             @foreach($Type_Bloods as $Type_Blood)
-                                <option value="{{$Type_Blood->id}}">{{$Type_Blood->Name}}</option>
+                                <option value="{{$Type_Blood->id}}">{{$Type_Blood->name}}</option>
                             @endforeach
                         </select>
                         @error('Blood_Type_Mother_id')
@@ -94,7 +94,7 @@
                         <select class="custom-select my-1 mr-sm-2" wire:model="Religion_Mother_id">
                             <option selected>{{trans('Parent_trans.Choose')}}...</option>
                             @foreach($Religions as $Religion)
-                                <option value="{{$Religion->id}}">{{$Religion->Name}}</option>
+                                <option value="{{$Religion->id}}">{{$Religion->name}}</option>
                             @endforeach
                         </select>
                         @error('Religion_Mother_id')
@@ -116,8 +116,14 @@
                     {{trans('Parent_trans.Back')}}
                 </button>
 
-                <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="button"
-                        wire:click="secondStepSubmit">{{trans('Parent_trans.Next')}}</button>
+                @if($updateMode)
+                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" wire:click="secondStepSubmit_edit"
+                            type="button">{{trans('Parent_trans.Next')}}
+                    </button>
+                @else
+                    <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="button"
+                            wire:click="secondStepSubmit">{{trans('Parent_trans.Next')}}</button>
+                @endif
 
             </div>
         </div>

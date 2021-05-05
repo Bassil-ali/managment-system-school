@@ -18,6 +18,9 @@ return [
     'Blood_Type_Father_id' => 'Blood Type',
     'Religion_Father_id' => 'Religion',
     'Address_Father' => 'Address Father',
+    'add_parent' => 'Add parent',
+    'list_parent' => 'List parent',
+
 
     'Next' => 'Next',
     'Choose' => 'Choose',

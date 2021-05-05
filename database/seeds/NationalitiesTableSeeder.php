@@ -1,8 +1,8 @@
 <?php
 
+use App\Models\Nationalitie;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\Nationalitie;
 
 class NationalitiesTableSeeder extends Seeder
 {
@@ -1249,7 +1249,7 @@ class NationalitiesTableSeeder extends Seeder
         ];
 
         foreach ($nationals as $n) {
-            Nationalitie::create(['Name' => $n]);
+            Nationalitie::create(['name' => $n]);
         }
 
     }

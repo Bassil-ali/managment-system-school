@@ -29,6 +29,11 @@ return [
     'Passport_ID_Mother' => 'رقم جواز السفر',
     'Phone_Mother' => 'رقم الهاتف',
     'Address_Mother' => 'عنوان الام',
+    'add_parent' => 'اضافة ولي امر',
+    'list_parent' => 'قائمة اولياء الامور',
+
+  
+
 
     'Next' => 'التالي',
     'Back' => 'السابق',
