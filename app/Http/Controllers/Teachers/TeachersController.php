@@ -26,8 +26,11 @@ class TeachersController extends Controller
     public function index()
     {
         $Teachers = $this->Teacher->getAllTeachers();
+ 
+        $sections = $this->Teacher->getAllSections();
+
         //$Teachers = Teacher::all();
-        return view('pages.Teachers.Teachers',compact('Teachers'));
+        return view('pages.Teachers.Teachers',compact('Teachers','sections'));
     }
 
     public function create()

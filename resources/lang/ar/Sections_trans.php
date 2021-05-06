@@ -3,6 +3,7 @@
 return [
 
     'title_page' => 'الاقسام',
+    'Name_Teacher' => 'المعلمين',
     'List_Grade' => 'List_Grade',
     'add_section' => 'اضافة قسم',
     'edit_Section'=> 'تعديل قسم',

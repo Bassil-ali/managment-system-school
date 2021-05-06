@@ -7,6 +7,9 @@ interface TeacherRepositoryInterface{
  // get all Teachers
  public function getAllTeachers();
 
+ public function getAllSections();
+
+
  // Get specialization
  public function Getspecialization();
 

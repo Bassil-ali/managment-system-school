@@ -3,6 +3,7 @@
 return [
 
     'title_page' => 'sections',
+    'Name_Teacher' => 'Teachers',
     'List_Grade' => 'List_Grade',
     'add_section' => 'Add Section ',
     'edit_Section'=> 'Edit Section',

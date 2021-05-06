@@ -62,6 +62,7 @@
                                                                     </th>
                                                                     <th>{{ trans('Sections_trans.Name_Class') }}</th>
                                                                     <th>{{ trans('Sections_trans.Status') }}</th>
+                                                                    <th>{{ trans('Sections_trans.Name_Teacher') }}</th>
                                                                     <th>{{ trans('Sections_trans.Processes') }}</th>
                                                                 </tr>
                                                                 </thead>
@@ -82,6 +83,20 @@
                                                                                 <label
                                                                                     class="badge badge-danger">{{ trans('Sections_trans.Status_Section_No') }}</label>
                                                                             @endif
+
+                                                                        </td>
+                                                                        <td>
+
+                                                                            @foreach($sections as $section)
+
+                                                                          
+
+                                                                            @foreach($section->teachers as $section)
+                                                                            {{ $section->Name}}<br>
+                                                                        @endforeach
+
+                                                                           
+                                                                            @endforeach
 
                                                                         </td>
                                                                         <td>
@@ -339,6 +354,16 @@
                                                    class="control-label">{{ trans('Sections_trans.Name_Class') }}</label>
                                             <select name="Class_id" class="custom-select">
 
+                                            </select>
+                                        </div><br>
+
+
+                                        <div class="col">
+                                            <label for="inputName" class="control-label">{{ trans('Sections_trans.Name_Teacher') }}</label>
+                                            <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                                @foreach($teachers as $teacher)
+                                                    <option value="{{$teacher->id}}">{{$teacher->Name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
 

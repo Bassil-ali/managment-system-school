@@ -12,6 +12,11 @@ class TeacherRepository implements TeacherRepositoryInterface{
     return Teacher::latest()->get();
 }
 
+public function getAllSections(){
+
+    return  Teacher::with('sections')->get();
+}
+
   public function Getspecialization(){
       return specialication::latest()->get();
   }
