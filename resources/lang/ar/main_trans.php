@@ -14,6 +14,9 @@ return [
     'sections'=>'الاقسام',
     'List_sections'=>'قائمة الاقسام الدراسية',
     'students'=>'الطلاب',
+    'add_student'=>'اضافة طالب جديد',
+    'list_students'=>'قائمة الطلاب',
+    'Students_Promotions'=>'ترقية الطلاب',
     'Teachers'=>'المعلمين',
     'List_Teachers' => 'قائمة المعلمين',
     'Parents'=>'اولياء الامور',
@@ -27,7 +30,7 @@ return [
     'Settings'=>'الاعدادات',
     'Users'=>'المستخدمين',
     'Copyright' => 'جميع الحقوق محفوظة ',
-    'Name_Programer' => 'باسل علي'
+    'Name_Programer' => 'سمير جمال مورا سوفت'
 
 
 ];

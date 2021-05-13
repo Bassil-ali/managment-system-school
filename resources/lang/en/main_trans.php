@@ -14,7 +14,9 @@ return [
     'sections'=>'Sections',
     'List_sections'=>'List Sections',
     'students'=>'Students',
-    'Add_student'=>'Add Student',
+    'add_student'=>'Add student',
+    'list_students'=>'list Students',
+    'Students_Promotions'=>'Students Promotions',
     'information_student'=>'Information Students',
     'Students_upgrade'=>'Students Upgrade',
     'Graduate_students'=>'Graduate Students',
@@ -31,7 +33,7 @@ return [
     'Settings'=>'Settings',
     'Users'=>'Users',
     'Copyright' => 'Copyright',
-    'Name_Programer' => 'Bassil ali All Rights Reserved'
+    'Name_Programer' => 'SamirGamal MoraSoft All Rights Reserved'
 
 
 ];
