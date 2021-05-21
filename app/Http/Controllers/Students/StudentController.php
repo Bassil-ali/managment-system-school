@@ -48,7 +48,7 @@ class StudentController extends Controller
     }
 
 
-    public function update(StoreStudentsRequest $request)
+    public function update(StoreStudentRequest $request)
     {
         return $this->Student->Update_Student($request);
     }

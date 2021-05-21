@@ -82,7 +82,7 @@
                                     <select class="custom-select mr-sm-2" name="nationalitie_id">
                                         <option selected disabled>{{trans('Parent_trans.Choose')}}...</option>
                                         @foreach($nationals as $nal)
-                                            <option  value="{{ $nal->id }}">{{ $nal->name }}</option>
+                                            <option  value="{{ $nal->id }}">{{ $nal->Name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -94,7 +94,7 @@
                                     <select class="custom-select mr-sm-2" name="blood_id">
                                         <option selected disabled>{{trans('Parent_trans.Choose')}}...</option>
                                         @foreach($bloods as $bg)
-                                            <option value="{{ $bg->id }}">{{ $bg->name }}</option>
+                                            <option value="{{ $bg->id }}">{{ $bg->Name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -169,7 +169,6 @@
                         </div>
                         </div><br>
 
-                     
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="academic_year">{{trans('Students_trans.Attachments')}} : <span class="text-danger">*</span></label>
@@ -177,10 +176,8 @@
                         </div>
                     </div>
 
-                           
-                        
-        
-        
+
+
                     <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">{{trans('Students_trans.submit')}}</button>
                 </form>
 
@@ -193,53 +190,5 @@
 @section('js')
     @toastr_js
     @toastr_render
-    <script>
-        $(document).ready(function () {
-            $('select[name="Grade_id"]').on('change', function () {
-                var Grade_id = $(this).val();
-                if (Grade_id) {
-                    $.ajax({
-                        url: "{{ URL::to('Get_classrooms') }}/" + Grade_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            $('select[name="Classroom_id"]').empty();
-                            $.each(data, function (key, value) {
-                                $('select[name="Classroom_id"]').append('<option selected disabled >{{trans('Parent_trans.Choose')}}...</option>');
-                                $('select[name="Classroom_id"]').append('<option value="' + key + '">' + value + '</option>');
-                            });
-                        },
-                    });
-                }
-                else {
-                    console.log('AJAX load did not work');
-                }
-            });
-        });
-    </script>
 
-
-    <script>
-        $(document).ready(function () {
-            $('select[name="Classroom_id"]').on('change', function () {
-                var Classroom_id = $(this).val();
-                if (Classroom_id) {
-                    $.ajax({
-                        url: "{{ URL::to('Get_Sections') }}/" + Classroom_id,
-                        type: "GET",
-                        dataType: "json",
-                        success: function (data) {
-                            $('select[name="section_id"]').empty();
-                            $.each(data, function (key, value) {
-                                $('select[name="section_id"]').append('<option value="' + key + '">' + value + '</option>');
-                            });
-                        },
-                    });
-                }
-                else {
-                    console.log('AJAX load did not work');
-                }
-            });
-        });
-    </script>
 @endsection
