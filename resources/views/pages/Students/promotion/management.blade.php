@@ -61,20 +61,13 @@
                                                 <td>{{$promotion->t_classroom->Name_Class}}</td>
                                                 <td>{{$promotion->t_section->Name_Section}}</td>
                                                 <td>
-                                                    <a href="{{route('Students.edit',$promotion->id)}}"
-                                                       class="btn btn-info btn-sm" role="button" aria-pressed="true"><i
-                                                            class="fa fa-edit"></i></a>
-                                                    <button type="button" class="btn btn-danger btn-sm"
-                                                            data-toggle="modal"
-                                                            data-target="#Delete_Student{{ $promotion->id }}"
-                                                            title="{{ trans('Grades_trans.Delete') }}"><i
-                                                            class="fa fa-trash"></i></button>
-                                                    <a href="{{route('Students.show',$promotion->id)}}"
-                                                       class="btn btn-warning btn-sm" role="button" aria-pressed="true"><i
-                                                            class="far fa-eye"></i></a>
+                                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#Delete_one{{$promotion->id}}">ارجاع الطالب</button>
+                                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#">تخرج الطالب</button>
                                                 </td>
                                             </tr>
-                                   @include('pages.Students.promotion.Delete_all')
+                                        @include('pages.Students.promotion.Delete_all')
+                                        @include('pages.Students.promotion.Delete_one')
+                                        
                                         @endforeach
                                     </table>
                                 </div>
