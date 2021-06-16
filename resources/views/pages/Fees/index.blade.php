@@ -35,6 +35,7 @@
                                             <th>المرحلة الدراسية</th>
                                             <th>الصف الدراسي</th>
                                             <th>السنة الدراسية</th>
+                                            <th>نوع الرسوم</th>
                                             <th>ملاحظات</th>
                                             <th>العمليات</th>
                                         </tr>
@@ -47,6 +48,14 @@
                                             <td>{{ number_format($fee->amount, 2) }}</td>
                                             <td>{{$fee->grade->Name}}</td>
                                             <td>{{$fee->classroom->Name_Class}}</td>
+                                            @if($fee->fee_type == 1)
+                                            <td>رسوم دراسية</td>
+                                            @else
+                                            <td>رسوم باص</td>
+        
+        
+                                            @endif
+        
                                             <td>{{$fee->year}}</td>
                                             <td>{{$fee->description}}</td>
                                                 <td>
