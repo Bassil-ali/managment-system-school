@@ -222,7 +222,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary"
                     data-dismiss="modal">{{ trans('Grades_trans.Close') }}</button>
-                <button type="submit" class="btn btn-success">{{ trans('Grades_trans.submit') }}</button>
+                <button onclick="$this.submit().closed().form().submit()" class="btn btn-success">{{ trans('Grades_trans.submit') }}</button>
             </div>
             </form>
 
