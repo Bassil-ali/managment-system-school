@@ -14,12 +14,14 @@ class Student extends Model
     public $translatable = ['name'];
     protected $guarded =[];
 
+    // علاقة بين الطلاب والانواع لجلب اسم النوع في جدول الطلاب
 
     public function gender()
     {
         return $this->belongsTo('App\Models\Gender', 'gender_id');
     }
 
+    // علاقة بين الطلاب والمراحل الدراسية لجلب اسم المرحلة في جدول الطلاب
 
     public function grade()
     {
@@ -27,12 +29,14 @@ class Student extends Model
     }
 
 
+    // علاقة بين الطلاب الصفوف الدراسية لجلب اسم الصف في جدول الطلاب
 
     public function classroom()
     {
         return $this->belongsTo('App\Models\Classroom', 'Classroom_id');
     }
 
+    // علاقة بين الطلاب الاقسام الدراسية لجلب اسم القسم  في جدول الطلاب
 
     public function section()
     {
@@ -40,11 +44,13 @@ class Student extends Model
     }
 
 
+    // علاقة بين الطلاب والصور لجلب اسم الصور  في جدول الطلاب
     public function images()
     {
         return $this->morphMany('App\Models\Image', 'imageable');
     }
 
+    // علاقة بين الطلاب والجنسيات  لجلب اسم الجنسية  في جدول الجنسيات
 
     public function Nationality()
     {
@@ -52,12 +58,18 @@ class Student extends Model
     }
 
 
+    // علاقة بين الطلاب والاباء لجلب اسم الاب في جدول الاباء
 
     public function myparent()
     {
         return $this->belongsTo('App\Models\My_Parent', 'parent_id');
     }
 
-   
+    // علاقة بين جدول سدادت الطلاب وجدول الطلاب لجلب اجمالي المدفوعات والمتبقي
+    public function student_account()
+    {
+        return $this->hasMany('App\Models\StudentAccount', 'student_id');
+
+    }
 
 }

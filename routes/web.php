@@ -2,16 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Auth::routes();
 
@@ -76,6 +67,7 @@ Route::group(
         Route::resource('Promotion', 'PromotionController');
         Route::resource('Fees_Invoices', 'FeesInvoicesController');
         Route::resource('Fees', 'FeesController');
+        Route::resource('ProcessingFee', 'ProcessingFeeController');
         Route::resource('receipt_students', 'ReceiptStudentsController');
         Route::get('/Get_classrooms/{id}', 'StudentController@Get_classrooms');
         Route::get('/Get_Sections/{id}', 'StudentController@Get_Sections');
@@ -84,10 +76,4 @@ Route::group(
         Route::post('Delete_attachment', 'StudentController@Delete_attachment')->name('Delete_attachment');
     });
 
-     //==============================Promotion Students ============================
-     Route::group(['namespace' => 'Students'], function () {
-        Route::resource('Promotion', 'PromotionController');
-    });
-
-    
 });

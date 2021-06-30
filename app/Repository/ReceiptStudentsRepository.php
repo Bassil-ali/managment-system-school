@@ -4,6 +4,7 @@
 namespace App\Repository;
 
 
+
 use App\Models\FundAccount;
 use App\Models\ReceiptStudent;
 use App\Models\Student;
@@ -46,6 +47,7 @@ class ReceiptStudentsRepository implements ReceiptStudentsRepositoryInterface
             $receipt_students->Debit = $request->Debit;
             $receipt_students->description = $request->description;
             $receipt_students->save();
+            
 
             // حفظ البيانات في جدول الصندوق
             $fund_accounts = new FundAccount();
