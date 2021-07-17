@@ -10,6 +10,7 @@ use App\Models\Grade;
 class FeesRepository implements FeesRepositoryInterface
 {
 
+
     public function index(){
 
         $fees = Fee::all();
