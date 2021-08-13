@@ -34,6 +34,7 @@
                                         <th class="alert-success">{{ trans('Students_trans.Grade') }}</th>
                                         <th class="alert-success">{{ trans('Students_trans.classrooms') }}</th>
                                         <th class="alert-success">{{ trans('Students_trans.section') }}</th>
+                                        <th class="alert-success">Time</th>
                                         <th class="alert-success">{{ trans('Students_trans.Processes') }}</th>
                                     </tr>
                                 </thead>
@@ -47,6 +48,7 @@
                                             <td>{{ $student->grade->Name }}</td>
                                             <td>{{ $student->classroom->Name_Class }}</td>
                                             <td>{{ $student->section->Name_Section }}</td>
+                                            <td>{{ $student->created_at }}</td>
                                             <td>
 
                                                 @if(isset($student->attendance()->where('attendence_date',date('Y-m-d'))->first()->student_id))

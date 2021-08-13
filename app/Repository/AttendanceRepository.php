@@ -28,7 +28,20 @@ class AttendanceRepository implements AttendanceRepositoryInterface
 
     public function Attendance_tomo($id){
 
-         $students = Student::with('attendance')->where('section_id', $id)->get();
+         $students = Attendance::where('section_id', $id)->get();
+
+         foreach($students as $student){
+
+              if(Student::where('id',$student->student_id)->get() == null){
+
+                return redirect()->back()->withErrors(['error' => $e->getMessage()]);
+
+            }
+            
+            $students = Student::where('id',$student->student_id)->get();
+            
+          
+         }
          return view('pages.Attendance.attendance', compact('students'));
 
     }
