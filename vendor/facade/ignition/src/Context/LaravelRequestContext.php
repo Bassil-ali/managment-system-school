@@ -3,7 +3,9 @@
 namespace Facade\Ignition\Context;
 
 use Facade\FlareClient\Context\RequestContext;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Throwable;
 
 class LaravelRequestContext extends RequestContext
 {
@@ -23,7 +25,7 @@ class LaravelRequestContext extends RequestContext
             if (! $user) {
                 return [];
             }
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             return [];
         }
 
@@ -35,7 +37,7 @@ class LaravelRequestContext extends RequestContext
             if (method_exists($user, 'toArray')) {
                 return $user->toArray();
             }
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             return [];
         }
 
@@ -69,8 +71,12 @@ class LaravelRequestContext extends RequestContext
     protected function getRouteParameters(): array
     {
         try {
-            return collect(optional($this->request->route())->parameters ?? [])->toArray();
-        } catch (\Throwable $e) {
+            return collect(optional($this->request->route())->parameters ?? [])
+                ->map(function ($parameter) {
+                    return $parameter instanceof Model ? $parameter->withoutRelations() : $parameter;
+                })
+                ->toArray();
+        } catch (Throwable $e) {
             return [];
         }
     }
