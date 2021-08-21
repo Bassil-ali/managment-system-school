@@ -2,7 +2,11 @@
 @section('css')
     @toastr_css
 @section('title')
+<<<<<<< HEAD
    Attendance list 
+=======
+    قائمة الحضور والغياب للطلاب
+>>>>>>> 885bc0c3dd51759916c44a5bd516bed51c8ff079
 @stop
 @endsection
 @section('page-header')
