@@ -30,7 +30,7 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => '8b54f70ee652bda326a774ea5e5143545c234223',
+    'reference' => '9e9834247f01e3b38eab5fb74b465a0eec7d89a5',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -174,6 +174,15 @@ class InstalledVersions
       array (
       ),
       'reference' => 'fdf92f03e150ed84d5967a833ae93abffac0315b',
+    ),
+    'firebase/php-jwt' => 
+    array (
+      'pretty_version' => 'v5.5.1',
+      'version' => '5.5.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '83b609028194aa042ea33b5af2d41a7427de80e6',
     ),
     'fruitcake/laravel-cors' => 
     array (
@@ -446,7 +455,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => '8b54f70ee652bda326a774ea5e5143545c234223',
+      'reference' => '9e9834247f01e3b38eab5fb74b465a0eec7d89a5',
     ),
     'laravel/tinker' => 
     array (
@@ -493,6 +502,15 @@ class InstalledVersions
       ),
       'reference' => '3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3',
     ),
+    'league/oauth2-client' => 
+    array (
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'badb01e62383430706433191b82506b6df24ad98',
+    ),
     'livewire/livewire' => 
     array (
       'pretty_version' => 'v2.5.5',
@@ -501,6 +519,33 @@ class InstalledVersions
       array (
       ),
       'reference' => 'de192292d68276d831e5fd9824c80c3b78a21ddf',
+    ),
+    'macsidigital/laravel-api-client' => 
+    array (
+      'pretty_version' => '3.3.5',
+      'version' => '3.3.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5af84e875f82ec09de4f7a4989af60038f6e2806',
+    ),
+    'macsidigital/laravel-oauth2-client' => 
+    array (
+      'pretty_version' => '1.2.0',
+      'version' => '1.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bcaba6b76d4e91c6dd79ebab857b4cc960bd1b09',
+    ),
+    'macsidigital/laravel-zoom' => 
+    array (
+      'pretty_version' => '4.1.9',
+      'version' => '4.1.9.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b91f5bd4130cb66c772e04052dc91263b19accb3',
     ),
     'mcamara/laravel-localization' => 
     array (
@@ -577,6 +622,15 @@ class InstalledVersions
       array (
       ),
       'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'pretty_version' => 'v9.99.100',
+      'version' => '9.99.100.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '996434e5492cb4c3edcb9168db6fbb1359ef965a',
     ),
     'phar-io/manifest' => 
     array (
@@ -788,8 +842,8 @@ class InstalledVersions
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0|2.0',
       ),
     ),
     'psr/simple-cache' => 
