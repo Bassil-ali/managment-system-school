@@ -3,16 +3,20 @@
 use Illuminate\Support\Facades\Route;
 
 
+//Auth::routes();
 
-Auth::routes();
+Route::get('/', 'HomeController@index')->name('selection');
 
-Route::group(['middleware' => ['guest']], function () {
 
-    Route::get('/', function () {
-        return view('auth.login');
-    });
-});
+Route::group(
+    ['namespace' => 'Auth'],
+    function () {
 
+        Route::get('/login/{type}', 'LoginController@loginForm')->middleware('guest')->name('login.show');
+
+        Route::post('/login', 'LoginController@login')->name('login');
+    }
+);
 
 //==============================Translate all pages============================
 Route::group(
