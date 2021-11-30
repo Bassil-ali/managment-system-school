@@ -77,6 +77,7 @@
                                     @enderror
 
                                 </div>
+                                <input type="hidden" value="{{$type}}" name="type">
 
                                 <div class="section-field mb-20">
                                     <label class="mb-10" for="Password">كلمة المرور * </label>

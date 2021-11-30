@@ -8,15 +8,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('selection');
 
 
-Route::group(
-    ['namespace' => 'Auth'],
-    function () {
+Route::group(['namespace' => 'Auth'], function () {
 
-        Route::get('/login/{type}', 'LoginController@loginForm')->middleware('guest')->name('login.show');
+Route::get('/login/{type}','LoginController@loginForm')->middleware('guest')->name('login.show');
 
-        Route::post('/login', 'LoginController@login')->name('login');
-    }
-);
+Route::post('/login','LoginController@login')->name('login');
+
+Route::get('/logout/{type}', 'LoginController@logout')->name('logout');
+
+
+});
 
 //==============================Translate all pages============================
 Route::group(
@@ -27,7 +28,7 @@ Route::group(
     function () {
 
         //==============================dashboard============================
-        Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+        Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
         //==============================dashboard============================
         Route::group(['namespace' => 'Grades'], function () {
