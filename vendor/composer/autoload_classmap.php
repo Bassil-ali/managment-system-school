@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
-    'App\\Event' => $baseDir . '/app/Event.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -38,6 +37,7 @@ return array(
     'App\\Http\\Controllers\\parents\\MyParent' => $baseDir . '/app/Http/Controllers/parents/MyParent.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Livewire\\AddParent' => $baseDir . '/app/Http/Livewire/AddParent.php',
+    'App\\Http\\Livewire\\Calendar' => $baseDir . '/app/Http/Livewire/Calendar.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -58,6 +58,7 @@ return array(
     'App\\Http\\Traits\\MeetingZoomTrait' => $baseDir . '/app/Http/Traits/MeetingZoomTrait.php',
     'App\\Models\\Attendance' => $baseDir . '/app/Models/Attendance.php',
     'App\\Models\\Classroom' => $baseDir . '/app/Models/Classroom.php',
+    'App\\Models\\Event' => $baseDir . '/app/Models/Event.php',
     'App\\Models\\Fee' => $baseDir . '/app/Models/Fee.php',
     'App\\Models\\Fee_invoice' => $baseDir . '/app/Models/Fee_invoice.php',
     'App\\Models\\FundAccount' => $baseDir . '/app/Models/FundAccount.php',
@@ -885,7 +886,6 @@ return array(
     'Faker\\Provider\\nl_BE\\Payment' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_BE/Payment.php',
     'Faker\\Provider\\nl_BE\\Person' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_BE/Person.php',
     'Faker\\Provider\\nl_BE\\PhoneNumber' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_BE/PhoneNumber.php',
-    'Faker\\Provider\\nl_BE\\Text' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_BE/Text.php',
     'Faker\\Provider\\nl_NL\\Address' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_NL/Address.php',
     'Faker\\Provider\\nl_NL\\Color' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_NL/Color.php',
     'Faker\\Provider\\nl_NL\\Company' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/nl_NL/Company.php',

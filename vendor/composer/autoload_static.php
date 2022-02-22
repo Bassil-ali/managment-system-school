@@ -543,7 +543,6 @@ class ComposerStaticInite415094aeed7dd4dd006a63e5f44ce97
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Event' => __DIR__ . '/../..' . '/app/Event.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -574,6 +573,7 @@ class ComposerStaticInite415094aeed7dd4dd006a63e5f44ce97
         'App\\Http\\Controllers\\parents\\MyParent' => __DIR__ . '/../..' . '/app/Http/Controllers/parents/MyParent.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\AddParent' => __DIR__ . '/../..' . '/app/Http/Livewire/AddParent.php',
+        'App\\Http\\Livewire\\Calendar' => __DIR__ . '/../..' . '/app/Http/Livewire/Calendar.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -594,6 +594,7 @@ class ComposerStaticInite415094aeed7dd4dd006a63e5f44ce97
         'App\\Http\\Traits\\MeetingZoomTrait' => __DIR__ . '/../..' . '/app/Http/Traits/MeetingZoomTrait.php',
         'App\\Models\\Attendance' => __DIR__ . '/../..' . '/app/Models/Attendance.php',
         'App\\Models\\Classroom' => __DIR__ . '/../..' . '/app/Models/Classroom.php',
+        'App\\Models\\Event' => __DIR__ . '/../..' . '/app/Models/Event.php',
         'App\\Models\\Fee' => __DIR__ . '/../..' . '/app/Models/Fee.php',
         'App\\Models\\Fee_invoice' => __DIR__ . '/../..' . '/app/Models/Fee_invoice.php',
         'App\\Models\\FundAccount' => __DIR__ . '/../..' . '/app/Models/FundAccount.php',
@@ -1421,7 +1422,6 @@ class ComposerStaticInite415094aeed7dd4dd006a63e5f44ce97
         'Faker\\Provider\\nl_BE\\Payment' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/Payment.php',
         'Faker\\Provider\\nl_BE\\Person' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/Person.php',
         'Faker\\Provider\\nl_BE\\PhoneNumber' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/PhoneNumber.php',
-        'Faker\\Provider\\nl_BE\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_BE/Text.php',
         'Faker\\Provider\\nl_NL\\Address' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_NL/Address.php',
         'Faker\\Provider\\nl_NL\\Color' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_NL/Color.php',
         'Faker\\Provider\\nl_NL\\Company' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/nl_NL/Company.php',
