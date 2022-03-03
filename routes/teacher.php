@@ -29,7 +29,13 @@ Route::group(
        $data['count_sections'] =  $ids->count();
        $data['count_students'] = DB::table('students')->whereIn('section_id',$ids)->count();
        $data['students'] = DB::table('students')->whereIn('section_id',$ids)->get();
-        return view('pages.Teachers.dashboard.dashboard',$data);
+       return view('pages.Teachers.dashboard.dashboard',$data);
+    });
+
+     Route::group(['namespace' => 'Teachers\dashboard'], function () {
+        //==============================students============================
+     Route::get('student','StudentController@index')->name('student.index');
+
     });
 
 });

@@ -14,7 +14,7 @@
 
         <!-- الطلاب-->
         <li>
-            <a href="#"><i class="fas fa-user-graduate"></i><span
+            <a target="_blank" href="{{route('student.index')}}"><i class="fas fa-user-graduate"></i><span
                     class="right-nav-text">الطلاب</span></a>
         </li>
 
@@ -27,8 +27,8 @@
 
         <!-- الملف الشخصي-->
         <li>
-            <a href="{{route('settings.index')}}"><i class="fas fa-id-card-alt"></i><span
-                    class="right-nav-text">الملف الشخصي</span></a>
+            <a href="{{route('settings.index')}}"><i class="fas fa-id-card-alt"></i><span class="right-nav-text">الملف
+                    الشخصي</span></a>
         </li>
 
     </ul>
