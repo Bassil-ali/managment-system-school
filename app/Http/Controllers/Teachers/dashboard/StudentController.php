@@ -42,7 +42,7 @@ class StudentController extends Controller
                     $attendence_status = false;
                 }
 
-                Attendance::create([
+               Attendance::updateorCreate(['student_id'=> $studentid],[
                     'student_id' => $studentid,
                     'grade_id' => $request->grade_id,
                     'classroom_id' => $request->classroom_id,
