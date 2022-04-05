@@ -40,7 +40,7 @@
                 <div class="clearfix"></div>
             </a>
             <ul id="sections-menu" class="collapse" data-parent="#sidebarnav">
-                <li><a href="#">تقرير الحضور والغياب</a></li>
+                <li><a href="{{route('attendance.report')}}">تقرير الحضور والغياب</a></li>
                 <li><a href="#">تقرير الامتحانات</a></li>
             </ul>
 
