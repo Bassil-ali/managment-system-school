@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,25 +25,28 @@ Route::group(
 
     //==============================dashboard============================
     Route::get('/teacher/dashboard', function () {
-       
 
-       $ids = DB::table('teacher_section')->where('teacher_id',auth()->user()->id)->pluck('section_id');
-       $data['count_sections'] =  $ids->count();
-       $data['count_students'] = DB::table('students')->whereIn('section_id',$ids)->count();
-       $data['students'] = DB::table('students')->whereIn('section_id',$ids)->get();
-       return view('pages.Teachers.dashboard.dashboard',$data);
+        $ids = Teacher::findorFail(auth()->user()->id)->Sections()->pluck('section_id');
+        $data['count_sections']= $ids->count();
+        $data['count_students']= \App\Models\Student::whereIn('section_id',$ids)->count();
+
+//        $ids = DB::table('teacher_section')->where('teacher_id',auth()->user()->id)->pluck('section_id');
+//        $count_sections =  $ids->count();
+//        $count_students = DB::table('students')->whereIn('section_id',$ids)->count();
+        return view('pages.Teachers.dashboard.dashboard',$data);
     });
 
-     Route::group(['namespace' => 'Teachers\dashboard'], function () {
+    Route::group(['namespace' => 'Teachers\dashboard'], function () {
         //==============================students============================
      Route::get('student','StudentController@index')->name('student.index');
-      Route::get('sections','StudentController@sections')->name('sections');
+     Route::get('sections','StudentController@sections')->name('sections');
      Route::post('attendance','StudentController@attendance')->name('attendance');
      Route::post('edit_attendance','StudentController@editAttendance')->name('attendance.edit');
-       Route::get('attendance_report','StudentController@attendanceReport')->name('attendance.report');
+     Route::get('attendance_report','StudentController@attendanceReport')->name('attendance.report');
      Route::post('attendance_report','StudentController@attendanceSearch')->name('attendance.search');
-
-
+     Route::resource('quizzes', 'QuizzController');
+     Route::get('/Get_classrooms/{id}', 'QuizzController@getClassrooms');
+     Route::get('/Get_Sections/{id}', 'QuizzController@Get_Sections');
 
     });
 
