@@ -9,7 +9,7 @@ use App\Models\Gender;
 use App\Models\Specialication;
 use App\Models\Teacher;
 
-class TeachersController extends Controller
+class TeacherController extends Controller
 {
     protected $Teacher;
 
