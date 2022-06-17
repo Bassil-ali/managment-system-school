@@ -49,8 +49,8 @@ Route::group(
      Route::resource('online_zoom_classes', 'OnlineZoomClassesController');
      Route::get('/indirect', 'OnlineZoomClassesController@indirectCreate')->name('indirect.teacher.create');
      Route::post('/indirect', 'OnlineZoomClassesController@storeIndirect')->name('indirect.teacher.store');
-
-
+     Route::get('profile', 'ProfileController@index')->name('profile.show');
+     Route::post('profile/{id}', 'ProfileController@update')->name('profile.update');
     });
 
 });
