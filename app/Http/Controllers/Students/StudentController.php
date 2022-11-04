@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Students;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreStudentRequest;
+use App\Http\Requests\StoreStudentsRequest;
 use App\Repository\StudentRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -18,7 +18,6 @@ class StudentController extends Controller
     }
 
 
-  
     public function index()
     {
        return $this->Student->Get_Student();
@@ -48,7 +47,7 @@ class StudentController extends Controller
     }
 
 
-    public function update(StoreStudentRequest $request)
+    public function update(StoreStudentsRequest $request)
     {
         return $this->Student->Update_Student($request);
     }

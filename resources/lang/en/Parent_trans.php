@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    'add_parent' => 'add parent',
     'Step1' => 'Father information',
     'Step2' => 'Mother information',
     'Step3' => 'Confirm information',
@@ -18,11 +18,23 @@ return [
     'Blood_Type_Father_id' => 'Blood Type',
     'Religion_Father_id' => 'Religion',
     'Address_Father' => 'Address Father',
-    'add_parent' => 'Add parent',
-    'list_parent' => 'List parent',
 
+    //معلومات الام
+    'Name_Mother' => 'Mother Name Arabic',
+    'Name_Mother_en' => 'Mother Name English',
+    'Job_Mother' => 'Job Title Arabic',
+    'Job_Mother_en' => 'Job Title English',
+    'National_ID_Mother' => 'Identification Number',
+    'Passport_ID_Mother' => 'Passport Number',
+    'Phone_Mother' => 'Telephone Number',
+    'Address_Mother' => 'Address Mother',
 
     'Next' => 'Next',
+    'Back' => 'Back',
+    'Finish' => 'Finish',
     'Choose' => 'Choose',
+    'Attachments' => 'Attachments',
+    'Processes' => 'Processes',
+
 
 ];

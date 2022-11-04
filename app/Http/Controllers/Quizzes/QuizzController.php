@@ -13,7 +13,7 @@ class QuizzController extends Controller
 
     public function __construct(QuizzRepositoryInterface $Quizz)
     {
-        $this->Quizz = $Quizz;
+        $this->Quizz =$Quizz;
     }
 
     public function index()

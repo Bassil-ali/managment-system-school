@@ -1,5 +1,3 @@
-
-
 @extends('layouts.master')
 @section('css')
     @toastr_css
@@ -110,4 +108,3 @@
         });
     </script>
 @endsection
-

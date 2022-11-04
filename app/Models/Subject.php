@@ -11,7 +11,7 @@ class Subject extends Model
 
     public $translatable = ['name'];
 
-    protected $fillable = ['name', 'grade_id', 'classroom_id', 'teacher_id'];
+    protected $fillable = ['name','grade_id','classroom_id','teacher_id'];
 
 
     // جلب اسم المراحل الدراسية
@@ -32,4 +32,6 @@ class Subject extends Model
     {
         return $this->belongsTo('App\Models\Teacher', 'teacher_id');
     }
+
+
 }

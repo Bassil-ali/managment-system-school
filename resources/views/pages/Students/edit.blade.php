@@ -84,7 +84,7 @@
                                     <select class="custom-select mr-sm-2" name="nationalitie_id">
                                         <option selected disabled>{{trans('Parent_trans.Choose')}}...</option>
                                         @foreach($nationals as $nal)
-                                            <option value="{{ $nal->id }}" {{$nal->id == $Students->nationalitie_id ? 'selected' : ""}}>{{ $nal->name }}</option>
+                                            <option value="{{ $nal->id }}" {{$nal->id == $Students->nationalitie_id ? 'selected' : ""}}>{{ $nal->Name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -96,7 +96,7 @@
                                     <select class="custom-select mr-sm-2" name="blood_id">
                                         <option selected disabled>{{trans('Parent_trans.Choose')}}...</option>
                                         @foreach($bloods as $bg)
-                                            <option value="{{ $bg->id }}" {{$bg->id == $Students->blood_id ? 'selected' : ""}}>{{ $bg->name }}</option>
+                                            <option value="{{ $bg->id }}" {{$bg->id == $Students->blood_id ? 'selected' : ""}}>{{ $bg->Name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -197,9 +197,11 @@
                                 $('select[name="Classroom_id"]').append('<option selected disabled >{{trans('Parent_trans.Choose')}}...</option>');
                                 $('select[name="Classroom_id"]').append('<option value="' + key + '">' + value + '</option>');
                             });
+
                         },
                     });
                 }
+
                 else {
                     console.log('AJAX load did not work');
                 }
@@ -222,9 +224,11 @@
                             $.each(data, function (key, value) {
                                 $('select[name="section_id"]').append('<option value="' + key + '">' + value + '</option>');
                             });
+
                         },
                     });
                 }
+
                 else {
                     console.log('AJAX load did not work');
                 }

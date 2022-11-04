@@ -4,20 +4,18 @@ namespace App\Repository;
 use App\Models\Classroom;
 use App\Models\Gender;
 use App\Models\Grade;
+use App\Models\Image;
 use App\Models\My_Parent;
 use App\Models\Nationalitie;
-use App\Models\Image;
-use Illuminate\Support\Facades\DB;
 use App\Models\Section;
 use App\Models\Student;
 use App\Models\Type_Blood;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 
-
 class StudentRepository implements StudentRepositoryInterface{
-
 
 
     public function Get_Student()
@@ -185,4 +183,6 @@ class StudentRepository implements StudentRepositoryInterface{
         toastr()->error(trans('messages.Delete'));
         return redirect()->route('Students.show',$request->student_id);
     }
-}  
+
+
+}

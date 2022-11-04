@@ -1,8 +1,8 @@
 <?php
 
+use App\Models\Religion;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\Religion;
 
 class religionTableSeeder extends Seeder
 {
@@ -33,7 +33,7 @@ class religionTableSeeder extends Seeder
         ];
 
         foreach ($religions as $R) {
-            Religion::create(['name' => $R]);
+            Religion::create(['Name' => $R]);
         }
     }
 }

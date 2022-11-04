@@ -8,8 +8,6 @@ interface AttendanceRepositoryInterface
 {
     public function index();
 
-    public function Attendance_tomo($id);
-
     public function show($id);
 
     public function store($request);
@@ -17,4 +15,5 @@ interface AttendanceRepositoryInterface
     public function update($request);
 
     public function destroy($request);
+
 }

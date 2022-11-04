@@ -16,12 +16,6 @@ class AttendanceController extends Controller
         $this->Attendance = $Attendance;
     }
 
-    public function Attendance_tomo($id){
-
-        return $this->Attendance->Attendance_tomo($id);
-
-
-    }
 
     public function index()
     {

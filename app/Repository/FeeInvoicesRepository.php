@@ -1,4 +1,6 @@
 <?php
+
+
 namespace App\Repository;
 
 
@@ -23,9 +25,14 @@ class FeeInvoicesRepository implements FeeInvoicesRepositoryInterface
     {
         $student = Student::findorfail($id);
         $fees = Fee::where('Classroom_id',$student->Classroom_id)->get();
-
-       
         return view('pages.Fees_Invoices.add',compact('student','fees'));
+    }
+
+    public function edit($id)
+    {
+        $fee_invoices = Fee_invoice::findorfail($id);
+        $fees = Fee::where('Classroom_id',$fee_invoices->Classroom_id)->get();
+        return view('pages.Fees_Invoices.edit',compact('fee_invoices','fees'));
     }
 
     public function store($request)
@@ -50,10 +57,10 @@ class FeeInvoicesRepository implements FeeInvoicesRepositoryInterface
 
                 // حفظ البيانات في جدول حسابات الطلاب
                 $StudentAccount = new StudentAccount();
-                $StudentAccount->student_id = $List_Fee['student_id'];
+                $StudentAccount->date = date('Y-m-d');
                 $StudentAccount->type = 'invoice';
-                $StudentAccount->date = date('y-m-d');
                 $StudentAccount->fee_invoice_id = $Fees->id;
+                $StudentAccount->student_id = $List_Fee['student_id'];
                 $StudentAccount->Debit = $List_Fee['amount'];
                 $StudentAccount->credit = 0.00;
                 $StudentAccount->description = $List_Fee['description'];
@@ -68,13 +75,6 @@ class FeeInvoicesRepository implements FeeInvoicesRepositoryInterface
             DB::rollback();
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
-    }
-
-    public function edit($id)
-    {
-        $fee_invoices = Fee_invoice::findorfail($id);
-        $fees = Fee::where('Classroom_id',$fee_invoices->Classroom_id)->get();
-        return view('pages.Fees_Invoices.edit',compact('fee_invoices','fees'));
     }
 
     public function update($request)
@@ -115,6 +115,5 @@ class FeeInvoicesRepository implements FeeInvoicesRepositoryInterface
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
     }
-
 
 }

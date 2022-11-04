@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Type_Blood;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class BloodTableSeeder extends Seeder
         $bgs = ['O-', 'O+', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-'];
 
         foreach($bgs as  $bg){
-            Type_Blood::create(['name' => $bg]);
+            Type_Blood::create(['Name' => $bg]);
         }
     }
 }

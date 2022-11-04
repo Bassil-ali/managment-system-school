@@ -1,3 +1,4 @@
+<!-- Deleted inFormation Student -->
 <div class="modal fade" id="Delete_receipt{{$ProcessingFee->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

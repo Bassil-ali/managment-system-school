@@ -21,7 +21,7 @@ class SettingController extends Controller
     public function update(Request $request){
 
         try{
-            $info = $request->except('_token', '_method');
+            $info = $request->except('_token', '_method', 'logo');
             foreach ($info as $key=> $value){
                 Setting::where('key', $key)->update(['value' => $value]);
             }

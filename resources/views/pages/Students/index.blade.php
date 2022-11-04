@@ -36,7 +36,6 @@
                                             <th>{{trans('Students_trans.Grade')}}</th>
                                             <th>{{trans('Students_trans.classrooms')}}</th>
                                             <th>{{trans('Students_trans.section')}}</th>
-                                            <th>{{trans('Students_trans.academic_year')}}</th>
                                             <th>{{trans('Students_trans.Processes')}}</th>
                                         </tr>
                                         </thead>
@@ -50,14 +49,12 @@
                                             <td>{{$student->grade->Name}}</td>
                                             <td>{{$student->classroom->Name_Class}}</td>
                                             <td>{{$student->section->Name_Section}}</td>
-                                            <td>{{$student->academic_year}}</td>
-
                                                 <td>
                                                     <div class="dropdown show">
                                                         <a class="btn btn-success btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                             العمليات
                                                         </a>
-                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                             <a class="dropdown-item" href="{{route('Students.show',$student->id)}}"><i style="color: #ffc107" class="far fa-eye "></i>&nbsp;  عرض بيانات الطالب</a>
                                                             <a class="dropdown-item" href="{{route('Students.edit',$student->id)}}"><i style="color:green" class="fa fa-edit"></i>&nbsp;  تعديل بيانات الطالب</a>
                                                             <a class="dropdown-item" href="{{route('Fees_Invoices.show',$student->id)}}"><i style="color: #0000cc" class="fa fa-edit"></i>&nbsp;اضافة فاتورة رسوم&nbsp;</a>

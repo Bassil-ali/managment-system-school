@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attendance extends Model
 {
-    protected $fillable = [
+    protected $fillable=[
         'student_id',
         'grade_id',
         'classroom_id',
@@ -15,7 +15,6 @@ class Attendance extends Model
         'attendence_date',
         'attendence_status',
     ];
-
 
     public function students()
     {

@@ -4,8 +4,8 @@ return [
 
     'Dashboard'=>'الرئيسية',
     'Dashboard_page'=>'لوحة التحكم',
-    'Main_title'=>'برنامج باسل علي لادارة المدارس',
-    'Programname' => 'برنامج باسل علي لادارة المدارس',
+    'Main_title'=>'سوفت لادارة المدارس',
+    'Programname' => ' سوفت لادارة المدارس',
     'change_language'=>'تغير اللغة',
     'Grades'=>'المراحل الدراسية',
     'Grades_list'=>'قائمة المراحل الدراسية',
@@ -36,7 +36,7 @@ return [
     'Settings'=>'الاعدادات',
     'Users'=>'المستخدمين',
     'Copyright' => 'جميع الحقوق محفوظة ',
-    'Name_Programer' => 'باسل علي'
+    'Name_Programer' => 'سمير جمال مورا سوفت'
 
 
 ];

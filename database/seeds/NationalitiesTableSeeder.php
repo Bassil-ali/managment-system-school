@@ -1249,7 +1249,7 @@ class NationalitiesTableSeeder extends Seeder
         ];
 
         foreach ($nationals as $n) {
-            Nationalitie::create(['name' => $n]);
+            Nationalitie::create(['Name' => $n]);
         }
 
     }

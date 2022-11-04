@@ -4,28 +4,27 @@ namespace App\Repository;
 
 interface TeacherRepositoryInterface{
 
- // get all Teachers
- public function getAllTeachers();
+    // get all Teachers
+    public function getAllTeachers();
 
- public function getAllSections();
+    // Get specialization
+    public function Getspecialization();
 
+    // Get Gender
+    public function GetGender();
 
- // Get specialization
- public function Getspecialization();
+    // StoreTeachers
+    public function StoreTeachers($request);
 
- // Get Gender
- public function GetGender();
+    // StoreTeachers
+    public function editTeachers($id);
 
- // StoreTeachers
- public function StoreTeachers($request);
+    // UpdateTeachers
+    public function UpdateTeachers($request);
 
- // StoreTeachers
- public function editTeachers($id);
-
- // UpdateTeachers
- public function UpdateTeachers($request);
-
- // DeleteTeachers
- public function DeleteTeachers($request);
+    // DeleteTeachers
+    public function DeleteTeachers($request);
 
 }
+
+

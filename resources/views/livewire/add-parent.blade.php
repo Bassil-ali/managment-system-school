@@ -1,9 +1,4 @@
 <div>
-    @if($show_table)
-
-    @else
-    <button class="btn btn-success btn-sm btn-lg pull-right" wire:click="tableshow" type="button">{{ trans('Parent_trans.list_parent') }}</button><br><br>
-@endif
     @if (!empty($successMessage))
         <div class="alert alert-success" id="success-alert">
             <button type="button" class="close" data-dismiss="alert">x</button>

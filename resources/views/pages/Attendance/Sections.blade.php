@@ -80,9 +80,6 @@
                                                                         <td>
                                                                             <a href="{{route('Attendance.show',$list_Sections->id)}}" class="btn btn-warning btn-sm" role="button" aria-pressed="true">قائمة الطلاب</a>
                                                                         </td>
-                                                                         <td>
-                                                                            <a href="{{route('Attendance_tomo',$list_Sections->id)}}" class="btn btn-danger btn-sm" role="button" aria-pressed="true">قائمة  غياب الطلاب</a>
-                                                                        </td>
                                                                     </tr>
                                                                 @endforeach
                                                                 </tbody>
@@ -128,6 +125,7 @@
                         }
                     });
                 });
+
             </script>
 
 @endsection

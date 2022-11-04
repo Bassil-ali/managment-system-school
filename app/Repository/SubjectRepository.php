@@ -14,14 +14,14 @@ class SubjectRepository implements SubjectRepositoryInterface
     public function index()
     {
         $subjects = Subject::get();
-        return view('pages.Subjects.index', compact('subjects'));
+        return view('pages.Subjects.index',compact('subjects'));
     }
 
     public function create()
     {
         $grades = Grade::get();
         $teachers = Teacher::get();
-        return view('pages.Subjects.create', compact('grades', 'teachers'));
+        return view('pages.Subjects.create',compact('grades','teachers'));
     }
 
 
@@ -36,19 +36,20 @@ class SubjectRepository implements SubjectRepositoryInterface
             $subjects->save();
             toastr()->success(trans('messages.success'));
             return redirect()->route('subjects.create');
-        } catch (\Exception $e) {
+        }
+        catch (\Exception $e) {
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }
 
 
-    public function edit($id)
-    {
+    public function edit($id){
 
-        $subject = Subject::findorfail($id);
+        $subject =Subject::findorfail($id);
         $grades = Grade::get();
         $teachers = Teacher::get();
-        return view('pages.Subjects.edit', compact('subject', 'grades', 'teachers'));
+        return view('pages.Subjects.edit',compact('subject','grades','teachers'));
+
     }
 
     public function update($request)
@@ -62,7 +63,8 @@ class SubjectRepository implements SubjectRepositoryInterface
             $subjects->save();
             toastr()->success(trans('messages.Update'));
             return redirect()->route('subjects.create');
-        } catch (\Exception $e) {
+        }
+        catch (\Exception $e) {
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
     }
@@ -73,7 +75,9 @@ class SubjectRepository implements SubjectRepositoryInterface
             Subject::destroy($request->id);
             toastr()->error(trans('messages.Delete'));
             return redirect()->back();
-        } catch (\Exception $e) {
+        }
+
+        catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);
         }
     }

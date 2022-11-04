@@ -5,10 +5,10 @@
         </div>
     </div>
     @push('scripts')
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.1/main.min.js'></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.1/main.min.js'></script>
 
-    <script>
-        document.addEventListener('livewire:load', function() {
+        <script>
+            document.addEventListener('livewire:load', function() {
                 var Calendar = FullCalendar.Calendar;
                 var Draggable = FullCalendar.Draggable;
                 var calendarEl = document.getElementById('calendar');
@@ -60,7 +60,7 @@
                 calendar.refetchEvents()
             });
             });
-    </script>
-    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.1/main.min.css' rel='stylesheet' />
+        </script>
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.1/main.min.css' rel='stylesheet' />
     @endpush
 </div>

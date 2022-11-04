@@ -96,20 +96,17 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
                  'academic_year'=>$Promotion->academic_year,
                ]);
 
-               
+                 //حذف جدول الترقيات
+                 Promotion::truncate();
 
              }
-
-               //حذف جدول الترقيات
-               Promotion::truncate();
-
-               
                 DB::commit();
                 toastr()->error(trans('messages.Delete'));
                 return redirect()->back();
 
+            }
 
-            }else{
+            else{
 
                 $Promotion = Promotion::findorfail($request->id);
                 student::where('id', $Promotion->student_id)
@@ -125,6 +122,7 @@ class StudentPromotionRepository implements StudentPromotionRepositoryInterface
                 DB::commit();
                 toastr()->error(trans('messages.Delete'));
                 return redirect()->back();
+
             }
 
         }

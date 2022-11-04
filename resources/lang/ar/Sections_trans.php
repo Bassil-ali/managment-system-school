@@ -3,7 +3,6 @@
 return [
 
     'title_page' => 'الاقسام',
-    'Name_Teacher' => 'المعلمين',
     'List_Grade' => 'List_Grade',
     'add_section' => 'اضافة قسم',
     'edit_Section'=> 'تعديل قسم',
@@ -17,6 +16,7 @@ return [
     'submit' => 'حفظ البيانات',
     'Name_Section'=>'اسم القسم',
     'Name_Class'=>'اسم الصف',
+    'Name_Teacher'=>'اسم المعلم',
     'Status'=>'الحالة',
     'Status_Section_AC'=>'نشط',
     'Status_Section_No'=>'غير نشط',

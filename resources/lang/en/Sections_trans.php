@@ -3,7 +3,6 @@
 return [
 
     'title_page' => 'sections',
-    'Name_Teacher' => 'Teachers',
     'List_Grade' => 'List_Grade',
     'add_section' => 'Add Section ',
     'edit_Section'=> 'Edit Section',
@@ -16,6 +15,7 @@ return [
     'submit' => 'submit',
     'Name_Section'=>'Name Section',
     'Name_Class'=>'Name Class',
+    'Name_Teacher'=>'Name Teacher',
     'Status'=>'Status',
     'Status_Section_AC'=>'Active',
     'Status_Section_No'=>'Not Active',

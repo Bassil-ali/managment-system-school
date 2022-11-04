@@ -21,10 +21,10 @@ class StudentsTableSeeder extends Seeder
      */
     public function run()
     {
-      //  DB::table('students')->delete();
+        DB::table('students')->delete();
         $students = new Student();
-        $students->name = ['ar' => 'باسل علي', 'en' => 'Bassil ali'];
-        $students->email = 'Bassilali@gmail.com';
+        $students->name = ['ar' => 'bassil ali', 'en' => 'bassil ali'];
+        $students->email = 'Ahmed_Ibrahim@yahoo.com';
         $students->password = Hash::make('12345678');
         $students->gender_id = 1;
         $students->nationalitie_id = Nationalitie::all()->unique()->random()->id;

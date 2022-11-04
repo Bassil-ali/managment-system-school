@@ -34,7 +34,6 @@
                                             <th>{{trans('Teacher_trans.Gender')}}</th>
                                             <th>{{trans('Teacher_trans.Joining_Date')}}</th>
                                             <th>{{trans('Teacher_trans.specialization')}}</th>
-                                            <th>Section</th>
                                             <th>العمليات</th>
                                         </tr>
                                         </thead>
@@ -48,20 +47,6 @@
                                             <td>{{$Teacher->genders->Name}}</td>
                                             <td>{{$Teacher->Joining_Date}}</td>
                                             <td>{{$Teacher->specializations->Name}}</td>
-                                            <td>
-
-                                                @foreach($sections as $section)
-
-                                                                          
-
-                                                @foreach($section->sections as $section)
-                                                {{ $section->Name_Section}}<br>
-                                                @endforeach
-
-                                               
-                                                @endforeach
-
-                                            </td>
                                                 <td>
                                                     <a href="{{route('Teachers.edit',$Teacher->id)}}" class="btn btn-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-edit"></i></a>
                                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_Teacher{{ $Teacher->id }}" title="{{ trans('Grades_trans.Delete') }}"><i class="fa fa-trash"></i></button>

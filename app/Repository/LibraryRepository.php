@@ -61,7 +61,7 @@ class LibraryRepository implements LibraryRepositoryInterface
 
                 $this->deleteFile($book->file_name);
 
-                $this->uploadFile($request,'file_name', 'library');
+                $this->uploadFile($request,'file_name');
 
                 $file_name_new = $request->file('file_name')->getClientOriginalName();
                 $book->file_name = $book->file_name !== $file_name_new ? $file_name_new : $book->file_name;

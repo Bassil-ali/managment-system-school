@@ -50,6 +50,7 @@
     function CheckAll(className, elem) {
         var elements = document.getElementsByClassName(className);
         var l = elements.length;
+
         if (elem.checked) {
             for (var i = 0; i < l; i++) {
                 elements[i].checked = true;
@@ -78,9 +79,11 @@
                         $.each(data, function (key, value) {
                             $('select[name="Classroom_id"]').append('<option value="' + key + '">' + value + '</option>');
                         });
+
                     },
                 });
             }
+
             else {
                 console.log('AJAX load did not work');
             }
@@ -103,9 +106,11 @@
                         $.each(data, function (key, value) {
                             $('select[name="section_id"]').append('<option value="' + key + '">' + value + '</option>');
                         });
+
                     },
                 });
             }
+
             else {
                 console.log('AJAX load did not work');
             }
@@ -132,9 +137,11 @@
                         $.each(data, function (key, value) {
                             $('select[name="Classroom_id_new"]').append('<option value="' + key + '">' + value + '</option>');
                         });
+
                     },
                 });
             }
+
             else {
                 console.log('AJAX load did not work');
             }
@@ -157,12 +164,16 @@
                         $.each(data, function (key, value) {
                             $('select[name="section_id_new"]').append('<option value="' + key + '">' + value + '</option>');
                         });
+
                     },
                 });
             }
+
             else {
                 console.log('AJAX load did not work');
             }
         });
     });
 </script>
+
+

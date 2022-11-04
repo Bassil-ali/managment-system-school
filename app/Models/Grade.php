@@ -9,17 +9,16 @@ class Grade extends Model
 {
 
     use HasTranslations;
-    protected $table = 'Grades';
     public $translatable = ['Name'];
 
     protected $fillable=['Name','Notes'];
-   
+    protected $table = 'Grades';
     public $timestamps = true;
 
-
-    public function Sections() {
-        
-        return $this->HasMany('App\Models\Section','Grade_id');
+    // علاقة المراحل الدراسية لجلب الاقسام المتعلقة بكل مرحلة
+    public function Sections()
+    {
+        return $this->hasMany('App\Models\Section', 'Grade_id');
     }
 
 }

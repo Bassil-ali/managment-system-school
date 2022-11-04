@@ -40,7 +40,6 @@
             <button type="button" class="button x-small" data-toggle="modal" data-target="#exampleModal">
                 {{ trans('Grades_trans.add_Grade') }}
             </button>
-            
             <br><br>
 
             <div class="table-responsive">
@@ -49,7 +48,6 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            
                             <th>{{ trans('Grades_trans.Name') }}</th>
                             <th>{{ trans('Grades_trans.Notes') }}</th>
                             <th>{{ trans('Grades_trans.Processes') }}</th>
@@ -61,7 +59,6 @@
                             <tr>
                                 <?php $i++; ?>
                                 <td>{{ $i }}</td>
-                               
                                 <td>{{ $Grade->Name }}</td>
                                 <td>{{ $Grade->Notes }}</td>
                                 <td>
@@ -222,7 +219,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary"
                     data-dismiss="modal">{{ trans('Grades_trans.Close') }}</button>
-                <button onclick="$this.submit().closed().form().submit()" class="btn btn-success">{{ trans('Grades_trans.submit') }}</button>
+                <button type="submit" class="btn btn-success">{{ trans('Grades_trans.submit') }}</button>
             </div>
             </form>
 
@@ -237,6 +234,4 @@
 @section('js')
 @toastr_js
 @toastr_render
-
-
 @endsection

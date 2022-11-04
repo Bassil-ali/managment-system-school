@@ -4,8 +4,8 @@ return [
 
     'Dashboard'=>'Dashboard',
     'Dashboard_page'=>'Dashboard',
-    'Main_title' => 'Bassil Ali School Management Program',
-    'Programname' => 'Bassil Ali School Management Program',
+    'Main_title' => 'MoraSoft School Management Program',
+    'Programname' => 'MoraSoft School Management Program',
     'change_language'=>'language',
     'Grades'=>'Grades',
     'Grades_list'=>'Grades List',
@@ -33,7 +33,7 @@ return [
     'Settings'=>'Settings',
     'Users'=>'Users',
     'Copyright' => 'Copyright',
-    'Name_Programer' => 'Bassil ali All Rights Reserved'
+    'Name_Programer' => 'SamirGamal MoraSoft All Rights Reserved'
 
 
 ];

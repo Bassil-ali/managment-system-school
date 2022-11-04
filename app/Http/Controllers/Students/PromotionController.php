@@ -15,7 +15,6 @@ class PromotionController extends Controller
         $this->Promotion = $Promotion;
     }
 
-   
     public function index()
     {
         return $this->Promotion->index();
@@ -58,4 +57,3 @@ class PromotionController extends Controller
 
     }
 }
-

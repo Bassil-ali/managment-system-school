@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Teachers;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Repository\TeacherRepositoryInterface;
 use App\Http\Requests\StoreTeachers;
 use App\Models\Gender;
-use App\Models\Specialication;
+use App\Models\Specialization;
 use App\Models\Teacher;
+use Illuminate\Http\Request;
+use App\Repository\TeacherRepositoryInterface;
 
 class TeacherController extends Controller
 {
@@ -18,19 +18,11 @@ class TeacherController extends Controller
         $this->Teacher = $Teacher;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $Teachers = $this->Teacher->getAllTeachers();
- 
-        $sections = $this->Teacher->getAllSections();
-
         //$Teachers = Teacher::all();
-        return view('pages.Teachers.Teachers',compact('Teachers','sections'));
+        return view('pages.Teachers.Teachers',compact('Teachers'));
     }
 
     public function create()

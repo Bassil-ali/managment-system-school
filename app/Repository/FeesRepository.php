@@ -10,7 +10,6 @@ use App\Models\Grade;
 class FeesRepository implements FeesRepositoryInterface
 {
 
-
     public function index(){
 
         $fees = Fee::all();
@@ -59,7 +58,6 @@ class FeesRepository implements FeesRepositoryInterface
 
     public function update($request)
     {
-
         try {
             $fees = Fee::findorfail($request->id);
             $fees->title = ['en' => $request->title_en, 'ar' => $request->title_ar];

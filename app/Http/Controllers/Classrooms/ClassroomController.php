@@ -134,6 +134,16 @@ class ClassroomController extends Controller
      * @param int $id
      * @return Response
      */
+    public function destroy(Request $request)
+    {
+
+        $Classrooms = Classroom::findOrFail($request->id)->delete();
+        toastr()->error(trans('messages.Delete'));
+        return redirect()->route('Classrooms.index');
+
+    }
+
+
     public function delete_all(Request $request)
     {
         $delete_all_id = explode(",", $request->delete_all_id);
@@ -151,6 +161,7 @@ class ClassroomController extends Controller
         return view('pages.My_Classes.My_Classes',compact('Grades'))->withDetails($Search);
 
     }
+
 
 }
 

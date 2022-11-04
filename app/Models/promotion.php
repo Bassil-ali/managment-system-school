@@ -56,4 +56,21 @@ class promotion extends Model
     {
         return $this->belongsTo('App\Models\Section', 'to_section');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

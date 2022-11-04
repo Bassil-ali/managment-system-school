@@ -5,8 +5,6 @@ namespace App\Repository;
 interface StudentRepositoryInterface{
 
 
-
-   
     //  Get_Student
     public function Get_Student();
 
@@ -43,5 +41,6 @@ interface StudentRepositoryInterface{
     //Delete_attachment
     public function Delete_attachment($request);
 
-
 }
+
+
