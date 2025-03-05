@@ -11,24 +11,10 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Setup PHP 8.2
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: 8.2
-        tools: composer
-
-    - name: Ensure Cache Path Exists
-      run: mkdir -p bootstrap/cache
-
-    - name: Update Composer Dependencies
-      run: composer update --no-interaction --prefer-dist
+    - uses: actions/checkout@v4
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -43,6 +29,6 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-interaction
-
-    
+      run: |
+        composer install --prefer-dist --no-progress
+        composer update --with-all-dependencies
